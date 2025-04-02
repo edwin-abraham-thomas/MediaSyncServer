@@ -1,0 +1,12 @@
+services:
+  mediasyncserver:
+    image: ${DOCKER_REGISTRY-}mediasyncserver
+    build:
+      context: .
+      dockerfile: MediaSyncServer/Dockerfile
+    networks:
+      - net
+
+networks:
+  net:
+    external: true

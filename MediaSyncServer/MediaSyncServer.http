@@ -1,0 +1,6 @@
+@MediaSyncServer_HostAddress = http://localhost:5090
+
+GET {{MediaSyncServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

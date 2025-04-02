@@ -1,0 +1,9 @@
+services:
+  mediasyncserver:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - MongoConnectionString=mongodb://user:localpassworrd@mongodb:27017/
+      - MongoDatabaseName=mediasync
+    ports:
+      - "8080:8080"
