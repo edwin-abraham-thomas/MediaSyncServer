@@ -18,6 +18,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
+builder.Services.AddHealthChecks();
 
 builder.Services.RegisterServices(builder.Environment, builder.Configuration);
 
@@ -39,5 +40,6 @@ app.UseCors("Localhost");
 
 app.MapControllers();
 app.MapHub<MediaControlsHub>("/mediacontrols");
+app.MapHealthChecks("/healthz");
 
 app.Run();
